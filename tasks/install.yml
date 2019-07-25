@@ -1,0 +1,27 @@
+---
+- name: INSTALL | Install Java
+  apt:
+    name: openjdk-8-jre
+    state: present
+
+- name: INSTALL | Add Jenkins apt repository key
+  apt_key:
+    url: "{{ jenkins_repo_key_url }}"
+    state: present
+
+- name: INSTALL | Add Jenkins apt repository
+  apt_repository:
+    repo: "{{ jenkins_repo }}"
+    filename: jenkins
+    state: present
+    update_cache: true
+  when:
+    jenkins_repo != ""
+
+- name: INSTALL | Install jenkins
+  apt:
+    name: jenkins
+    state: present
+    update_cache: true
+  notify:
+    - Ensure Jenkins service is started

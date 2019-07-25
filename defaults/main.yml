@@ -1,0 +1,8 @@
+---
+java_repo_key_url: keyserver.ubuntu.com
+java_key_id: EEA14886
+java_repo: deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+java_repo_src: deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+
+jenkins_repo_key_url: https://pkg.jenkins.io/debian/jenkins.io.key
+jenkins_repo: deb https://pkg.jenkins.io/debian-stable binary/

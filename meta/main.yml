@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  role_name: jenkins
+  author: Hitoshi Okonogi
+  description: role to install & manage jenkins
+  license: MIT
+  min_ansible_version: 2.2
+  platfors:
+    - name: Debian
+      version:
+        - stretch
+  galaxy_tags:
+    - jenkins
+    - workflow
+    - ci
